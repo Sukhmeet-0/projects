@@ -1,0 +1,25 @@
+.bg-custom{
+	background: #8e24aa;
+}
+.navbar .nav-item .nav-link{
+	font-size: 20px;
+	color: white;
+}
+.navbar-custom .nav-item:hover .nav-link{
+	background: white;
+	color: black;
+	border-radius: 20px;
+	
+}
+.div-color{
+	background: white;
+	height:580px;
+}
+.back-img {
+	background:url("https://source.unsplash.com/random/900X580/?notes");
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:580px;
+	
+	
+}
