@@ -33,8 +33,10 @@ public class loginServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		boolean f=dao.loginUser(us);
-		if(f) {
+		UserDetails user=dao.loginUser(us);
+		if(user!=null) {
+			HttpSession session=request.getSession();	
+			session.setAttribute("userd", user);
 			response.sendRedirect("home.jsp");
 		}else {
 			HttpSession session=request.getSession();

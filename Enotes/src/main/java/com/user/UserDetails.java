@@ -2,7 +2,14 @@ package com.user;
 
 public class UserDetails {
 	private String name,email,password;
+	int id;
 
+	public int getId() {
+		return id;
+	}
+	public void setId(int i) {
+		this.id = i;
+	}
 	public UserDetails() {
 		super();
 		// TODO Auto-generated constructor stub
