@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+UserDetails user2 = (UserDetails) session.getAttribute("userd");
+if (user2 == null) {
+	response.sendRedirect("login.jsp");
+	session.setAttribute("Login-Error","Please login first");
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>

@@ -13,12 +13,12 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="index.jsp"><i class="fa fa-home"
+					aria-current="page" href="home.jsp"><i class="fa fa-home"
 						aria-hidden="true"></i> Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i
+				<li class="nav-item"><a class="nav-link" href="addnotes.jsp"><i
 						class="fa fa-plus-circle" aria-hidden="true"></i> Add Notes</a></li>
 
-				<li class="nav-item"><a class="nav-link "><i
+				<li class="nav-item"><a class="nav-link " href="showNotes.jsp"><i
 						class="fa fa-address-book-o" aria-hidden="true"></i> Show Notes</a></li>
 			</ul>
 			<%
@@ -31,7 +31,7 @@
 				class="fa fa-user-circle-o" aria-hidden="true"></i> <%=user.getName()%></a>
 
 
-			<a href="index.jsp" class="btn btn-light " type="submit"><i
+			<a href="LogoutServlet" class="btn btn-light " type="submit"><i
 				class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
 			<!-- Modal -->
 			<!-- Modal -->
