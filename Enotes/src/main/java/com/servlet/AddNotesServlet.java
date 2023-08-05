@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 import com.DAO.postDAO;
 import com.db.DBConnect;
-import com.user.post;
+//import com.user.post;
 
 @WebServlet("/AddNotesServlet")
 @SuppressWarnings("serial")
@@ -31,6 +31,7 @@ public class AddNotesServlet extends HttpServlet {
 		boolean f=	dao.AddNotes(title,content,uid);
 		if(f) {
 			System.out.println("Data insert"+f);
+			response.sendRedirect("showNotes.jsp");
 		}else {
 			System.out.println("failed insertion"+f);
 		}
