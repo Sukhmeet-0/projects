@@ -63,4 +63,65 @@ public class postDAO {
 	
 		return list;
 	}
+	public post getDataById(int noteid)
+	{
+		post p=null;
+		try {
+			String qu="select * from post where id=?";
+			PreparedStatement ps=con.prepareStatement(qu);
+			
+			ps.setInt(1, noteid);
+			ResultSet rs=ps.executeQuery();
+			if(rs.next()) {
+				p=new post();
+				p.setId(rs.getInt(1));
+				p.setTitle(rs.getString(2));
+				p.setContent(rs.getString(3));
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return p;
+	}
+	public boolean PostUpdate(int nid,String ti,String co) {
+		boolean f=false;
+		
+		try {
+			String qu="update post set title=?,content=? where id=?";
+			PreparedStatement ps=con.prepareStatement(qu);
+			ps.setString(1, ti);
+			ps.setString(2, co);
+			ps.setInt(3, nid);
+			int i=ps.executeUpdate();
+			if(i==1) {
+				f=true;
+			}
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return f;
+	}
+	public boolean deleteNotes(int nid) {
+		boolean f=false;
+		
+		try {
+			String qu="delete from post where id=?";
+			PreparedStatement ps=con.prepareStatement(qu);
+			ps.setInt(1, nid);
+			
+			int x=ps.executeUpdate();
+			if(x==1) {
+				f=true;
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return f;
+	}
 }

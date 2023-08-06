@@ -14,8 +14,8 @@
 	
 	<div class="container-fluid back-img bg-primary">
 		<div class="text-center mt6">
-			<h1 class="text-white">
-				<i class="fa fa-book" aria-hidden="true"></i> E Notes Save Your
+			<h1 class="text-white" >
+				<i class="fa fa-book" aria-hidden="true" ></i> E Notes Save Your
 				Notes
 			</h1>
 			<a href="login.jsp" class="btn btn-light btn-lg mr-4 mt-5"><i
