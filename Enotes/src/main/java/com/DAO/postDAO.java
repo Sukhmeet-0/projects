@@ -110,7 +110,7 @@ public class postDAO {
 		boolean f=false;
 		
 		try {
-			String qu="delete from post where id=?";
+			String qu="delete from post where uid=?";
 			PreparedStatement ps=con.prepareStatement(qu);
 			ps.setInt(1, nid);
 			
